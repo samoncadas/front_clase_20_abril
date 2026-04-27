@@ -24,6 +24,9 @@ export default function Login() {
         })
         .then(function(data) {
             console.log(data)
+            SecureStore.setItemsAsync('token', data.access_token)
+            console.log(token);
+            
         })
     }
 
